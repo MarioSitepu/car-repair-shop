@@ -57,7 +57,7 @@ export function Footer() {
             <h4 className="text-white font-black uppercase tracking-widest text-sm mb-8 font-heading">Kontak Kami</h4>
             <ul className="space-y-6">
               <li className="flex items-start gap-4 group">
-                <a href="https://maps.app.goo.gl/CfrVzRUd9Ro4yzND6" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+                <a href="https://maps.app.goo.gl/z4fMMF8YdYyt1sxy7" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
                   <span className="text-sm leading-relaxed font-medium">Jl. Parang I No.15, Kwala Bekala, Kec. Medan Johor, Kota Medan, Sumatera Utara 20131</span>
                 </a>
               </li>

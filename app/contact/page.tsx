@@ -184,6 +184,51 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+      {/* Interactive Maps Section */}
+      <section className="pb-32 bg-slate-50">
+        <div className="container mx-auto px-4 md:px-6">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="w-full h-[600px] rounded-[3.5rem] overflow-hidden shadow-2xl shadow-slate-200/50 border-8 border-white relative group"
+          >
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.164366632467!2d98.649071!3d3.5387161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303125b29f461d7f%3A0xd52472de53f3444b!2sBengkel%20Sitepu!5e0!3m2!1sid!2sid!4v1712611760000!5m2!1sid!2sid" 
+              width="100%" 
+              height="100%" 
+              style={{ border: 0, filter: 'grayscale(0.2) contrast(1.1) brightness(0.9)' }} 
+              allowFullScreen={true} 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Lokasi Bengkel Sitepu"
+              className="grayscale-[20%] group-hover:grayscale-0 transition-all duration-700"
+            ></iframe>
+            <div className="absolute top-8 left-8 z-10">
+              <div className="glass p-6 rounded-3xl border border-white/20 backdrop-blur-xl pointer-events-none">
+                <div className="flex items-center gap-4">
+                  <div className="bg-accent p-3 rounded-xl text-slate-950">
+                    <MapPin className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="text-slate-950 font-black text-xs uppercase tracking-widest mb-1">Kunjungi Workshop</h4>
+                    <p className="text-slate-700 text-xs font-bold font-heading">Kwala Bekala, Medan Johor</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <a 
+              href="https://maps.app.goo.gl/z4fMMF8YdYyt1sxy7" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="absolute bottom-8 right-8 z-10 bg-slate-950 text-white px-8 py-4 rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-accent hover:text-slate-950 transition-all shadow-2xl flex items-center gap-3 group/btn"
+            >
+              PETUNJUK ARAH <ChevronRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+            </a>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
 }
