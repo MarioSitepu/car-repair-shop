@@ -74,9 +74,9 @@ export default function ServicesPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="text-5xl md:text-7xl font-black text-white mb-8 tracking-tighter uppercase leading-none font-heading"
+              className="text-5xl md:text-8xl font-black text-white mb-8 tracking-tighter uppercase font-heading leading-none"
             >
-              Layanan <br/><span className="text-accent underline decoration-accent/20">Profesional.</span>
+              Layanan <br/><span className="text-accent underline decoration-accent/20">Spesialis Pickup & Mobil Medan.</span>
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
@@ -84,7 +84,7 @@ export default function ServicesPage() {
               transition={{ delay: 0.2 }}
               className="text-xl text-slate-400 leading-relaxed font-medium max-w-2xl"
             >
-              Kami mengombinasikan keahlian mekanik senior dengan peralatan hardware & software terkini untuk memastikan mobil Anda berada pada performa puncaknya.
+              Bengkel Sitepu Parang 1 menyediakan diagnosa digital dan perawatan mekanikal untuk segala jenis kendaraan, mulai dari mobil pribadi hingga pickup operasional.
             </motion.p>
           </div>
         </div>

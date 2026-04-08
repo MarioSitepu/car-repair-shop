@@ -20,8 +20,8 @@ export function JsonLd() {
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": -6.2088,
-      "longitude": 106.8456
+      "latitude": 3.5393758,
+      "longitude": 98.6519077
     },
     "openingHoursSpecification": [
       {

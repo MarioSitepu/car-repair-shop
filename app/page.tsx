@@ -78,8 +78,8 @@ export default function Home() {
               variants={itemVariants} 
               className="text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] text-white uppercase text-balance"
             >
-              Presisi Mesin <br/>
-              <span className="text-accent italic selection:bg-white selection:text-slate-900">Maksimal.</span>
+              Bengkel Sitepu <br/>
+              <span className="text-accent italic selection:bg-white selection:text-slate-900">Parang 1 Medan.</span>
             </motion.h1>
             
             <motion.p 
@@ -147,7 +147,7 @@ export default function Home() {
                   <ShieldCheck className="w-8 h-8 text-accent" />
                 </div>
                 <h2 className="text-4xl md:text-5xl font-black text-slate-950 mb-6 uppercase tracking-tight font-heading leading-none">
-                  Proteksi Mutlak <br/><span className="text-accent underline decoration-accent/20">Garansi 30 Hari.</span>
+                  Bengkel Mobil Medan <br/><span className="text-accent underline decoration-accent/20">Spesialis Pickup.</span>
                 </h2>
                 <p className="text-slate-600 text-lg max-w-lg leading-relaxed font-medium">
                   Setiap detil servis kami dijamin. Jika masalah mekanis yang sama muncul dalam 30 hari, kami tangani tanpa biaya sepeser pun.
