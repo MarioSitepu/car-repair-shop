@@ -63,7 +63,9 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-4 group">
                 <div className="bg-white/5 p-2.5 rounded-xl group-hover:bg-accent/10 transition-colors">
-                  <Phone className="w-5 h-5 text-accent" />
+                  <a href="https://wa.me/6285262065007?text=Halo%20Bengkel%20Sitepu%20Medan%2C%20saya%20ingin%20tanya%20mengenai%20servis..." target="_blank" rel="noopener noreferrer">
+                    <Phone className="w-5 h-5 text-accent" />
+                  </a>
                 </div>
                 <span className="text-sm font-bold">+62 852 6206 5007</span>
               </li>

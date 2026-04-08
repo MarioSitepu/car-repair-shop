@@ -131,6 +131,62 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Specialized Fleet/Pickup Section */}
+      <section className="py-24 bg-slate-950 relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-white opacity-5" />
+        <div className="container mx-auto px-4 md:px-6">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="bg-accent/10 border-2 border-accent/20 rounded-[3.5rem] p-12 md:p-20 relative z-10 overflow-hidden group"
+          >
+            <div className="absolute top-0 right-0 p-12 opacity-5 scale-150 rotate-12 group-hover:rotate-6 transition-transform duration-700">
+              <CarFront className="w-64 h-64 text-white" />
+            </div>
+            
+            <div className="flex flex-col lg:flex-row items-center gap-16">
+              <div className="lg:w-2/3">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent text-slate-950 text-[10px] font-black uppercase tracking-widest mb-8">
+                  LAYANAN PRIORITAS BISNIS
+                </div>
+                <h2 className="text-4xl md:text-6xl font-black text-white mb-8 tracking-tighter uppercase font-heading">
+                  Spesialis Pickup <br/><span className="text-accent italic">& Armada Bisnis.</span>
+                </h2>
+                <p className="text-xl text-slate-400 font-medium leading-relaxed max-w-2xl mb-12">
+                  Kami mengerti bahwa armada operasional Anda adalah aset vital. Bengkel Sitepu Medan memberikan prioritas **Fast Track** bagi kendaraan operasional (L300, GranMax, Carry, dsb) untuk meminimalkan waktu henti bisnis Anda.
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                  {[
+                    "Prioritas Pengerjaan (Fast Track)",
+                    "Suku Cadang Heavy Duty",
+                    "Pencatatan Sejarah Servis Digital",
+                    "Harga Kompetitif untuk Unit Banyak"
+                  ].map((feat, i) => (
+                    <div key={i} className="flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-accent" />
+                      <span className="text-white font-bold uppercase tracking-tight text-sm">{feat}</span>
+                    </div>
+                  ))}
+                </div>
+                <Button size="lg" className="h-20 px-12 bg-accent hover:bg-yellow-500 text-slate-950 rounded-2xl font-black uppercase tracking-[0.3em] text-xs shadow-2xl shadow-accent/20" asChild>
+                  <a href="https://wa.me/6285262065007?text=Halo%20Bengkel%20Sitepu%2C%20saya%20tertarik%20dengan%20layanan%20prioritas%20armada%2Fpickup..." target="_blank" rel="noopener noreferrer">
+                    KONSULTASI ARMADA <ArrowRight className="ml-3 w-5 h-5" />
+                  </a>
+                </Button>
+              </div>
+              <div className="lg:w-1/3 text-center">
+                <div className="bg-slate-900 border border-white/5 p-12 rounded-[3rem] shadow-2xl">
+                  <div className="text-6xl font-black text-accent mb-2">95%+</div>
+                  <div className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-8">Same-Day Completion</div>
+                  <p className="text-slate-500 text-sm font-medium italic">"Unit masuk pagi, siap beroperasi kembali sore harinya."</p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Consultation Banner */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">

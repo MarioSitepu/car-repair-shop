@@ -94,7 +94,7 @@ export default function Home() {
                 <Link href="/contact">Booking Servis <ChevronRight className="w-5 h-5" /></Link>
               </Button>
               <Button size="lg" variant="outline" className="text-sm h-16 px-10 bg-white/5 backdrop-blur-md text-white border-white/10 hover:bg-white hover:text-slate-950 transition-all font-black uppercase tracking-widest gap-3 rounded-2xl group" asChild>
-                <a href="https://wa.me/6285262065007" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/6285262065007?text=Halo%20Bengkel%20Sitepu%20Medan%2C%20saya%20ingin%20konsultasi%20mengenai%20servis%20mobil%20saya..." target="_blank" rel="noopener noreferrer">
                   <Play className="w-4 h-4 fill-current group-hover:scale-110 transition-transform" />
                   Konsultasi Video
                 </a>
@@ -182,53 +182,119 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Grid - High Elegance */}
-      <section className="py-32 bg-white">
+      {/* Testimonials - Social Proof */}
+      <section className="py-32 bg-slate-50 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
         <div className="container mx-auto px-4 md:px-6">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-            <div className="max-w-3xl">
-              <div className="text-accent font-black uppercase tracking-[0.4em] text-xs mb-4">Layanan Terbaik Kami</div>
-              <h2 className="text-5xl md:text-7xl font-black text-slate-950 tracking-tighter uppercase leading-none font-heading">
-                Solusi <span className="text-border text-slate-200">Total</span> <br/>Untuk Kendaraan Anda.
-              </h2>
-            </div>
-            <Button variant="outline" size="lg" className="rounded-2xl h-16 px-10 border-slate-200 font-black uppercase tracking-widest text-xs hover:bg-slate-950 hover:text-white transition-all group" asChild>
-              <Link href="/services">
-                Semua Layanan
-                <ArrowRight className="ml-3 w-4 h-4 group-hover:translate-x-2 transition-transform" />
-              </Link>
-            </Button>
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <div className="text-accent font-black uppercase tracking-[0.4em] text-xs mb-4">APA KATA MEREKA?</div>
+            <h2 className="text-5xl md:text-7xl font-black text-slate-950 tracking-tighter uppercase leading-none font-heading mb-6">
+              Dipercaya Oleh <span className="text-accent">Ribuan</span> Pengendara.
+            </h2>
+            <p className="text-slate-500 font-medium text-lg leading-relaxed">
+              Kepuasan pelanggan adalah bensin utama kami. Berikut adalah pengalaman mereka servis di Bengkel Sitepu Medan.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {featuredServices.map((service, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { 
+                name: "Rendy Pratama", 
+                role: "Pemilik Toyota Fortuner", 
+                text: "Servis paling transparan di Medan. Mekaniknya menjelaskan detil kerusakan sebelum dikerjakan. Hasilnya memuaskan dan AC mobil jadi dingin banget!",
+                rating: 5
+              },
+              { 
+                name: "Hj. Siti Aminah", 
+                role: "Pengusaha Logistik (Unit Pickup)", 
+                text: "Untuk armada pickup operasional saya selalu bawa ke sini. Pengerjaannya cepat (Fast Track) dan harganya sangat jujur. Sangat direkomendasikan untuk pebisnis.",
+                rating: 5
+              },
+              { 
+                name: "Budi Santoso", 
+                role: "Pemilik Honda Civic", 
+                text: "Teknologi diagnostiknya canggih, bener-bener ketahuan masalahnya di mana. Gak asal ganti part. Bengkel Parang 1 paling mantap!",
+                rating: 5
+              }
+            ].map((testimonial, idx) => (
+              <motion.div 
+                key={idx}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.15 }}
+                transition={{ delay: idx * 0.1 }}
+                className="bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-xl shadow-slate-200/40 relative group hover:border-accent transition-all"
               >
-                <Card className="h-full border-none shadow-none group bg-transparent">
-                  <CardHeader className="p-0 mb-8">
-                    <div className="mb-8 p-6 rounded-[2rem] bg-slate-50 w-24 h-24 flex items-center justify-center group-hover:bg-accent group-hover:scale-110 transition-all duration-500 shadow-sm border border-slate-100 group-hover:border-accent">
-                      <div className="group-hover:text-slate-950 transition-colors">
-                        {service.icon}
-                      </div>
-                    </div>
-                    <CardTitle className="text-3xl font-black uppercase tracking-tight font-heading group-hover:text-accent transition-colors">{service.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="p-0">
-                    <CardDescription className="text-lg text-slate-500 leading-relaxed font-medium mb-6">
-                      {service.desc}
-                    </CardDescription>
-                    <Link href="/services" className="inline-flex items-center text-xs font-black uppercase tracking-widest text-slate-950 hover:gap-3 transition-all">
-                      PELAJARI LEBIH LANJUT <ArrowRight className="ml-2 w-4 h-4 text-accent" />
-                    </Link>
-                  </CardContent>
-                </Card>
+                <div className="flex gap-1 mb-6">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-accent text-accent" />
+                  ))}
+                </div>
+                <p className="text-slate-700 font-bold italic mb-8 leading-relaxed">"{testimonial.text}"</p>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-2xl bg-slate-100 flex items-center justify-center font-black text-slate-950">
+                    {testimonial.name[0]}
+                  </div>
+                  <div>
+                    <h4 className="font-black text-slate-950 leading-none mb-1">{testimonial.name}</h4>
+                    <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">{testimonial.role}</span>
+                  </div>
+                </div>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section - SEO Authority */}
+      <section className="py-32 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-20">
+            <div className="lg:col-span-5">
+              <div className="text-accent font-black uppercase tracking-[0.4em] text-xs mb-4">PERTANYAAN UMUM</div>
+              <h2 className="text-5xl md:text-6xl font-black text-slate-950 tracking-tighter uppercase leading-none font-heading mb-8">
+                Masih Punya <span className="text-border text-slate-200">Pertanyaan?</span>
+              </h2>
+              <p className="text-slate-500 font-medium text-lg leading-relaxed mb-10 italic">
+                Kami merangkum pertanyaan yang paling sering diajukan untuk memudahkan Anda memahami layanan kami di Bengkel Sitepu Medan.
+              </p>
+              <Button size="lg" className="rounded-2xl h-16 px-10 bg-slate-950 text-white font-black uppercase tracking-widest text-xs hover:bg-accent hover:text-slate-950 transition-all gap-4" asChild>
+                <a href="https://wa.me/6285262065007?text=Halo%20Bengkel%20Sitepu%20Medan%2C%20saya%20ingin%20tanya%20lebih%20lanjut..." target="_blank" rel="noopener noreferrer">
+                  TANYA ADMIN <ChevronRight className="w-4 h-4" />
+                </a>
+              </Button>
+            </div>
+            <div className="lg:col-span-7">
+              <Accordion type="single" collapsible className="space-y-4">
+                {[
+                  { 
+                    q: "Berapa lama proses tune up mobil?", 
+                    a: "Untuk tune up rutin biasanya memakan waktu 45-90 menit tergantung kondisi kendaraan. Kami menggunakan teknologi Fast Track untuk memastikan Anda tidak menunggu terlalu lama." 
+                  },
+                  { 
+                    q: "Apakah ada garansi setelah servis?", 
+                    a: "Ya, kami memberikan garansi servis selama 30 hari. Jika keluhan yang sama muncul kembali, kami akan menanganinya secara gratis (sesuai syarat dan ketentuan)." 
+                  },
+                  { 
+                    q: "Bisakah servis untuk mobil pickup/box operasional?", 
+                    a: "Tentu! Kami adalah spesialis pickup dan armada operasional di Medan. Kami memahami bahwa waktu adalah uang untuk bisnis Anda, maka kami prioritaskan pengerjaan cepat dan handal." 
+                  },
+                  { 
+                    q: "Di mana lokasi tepatnya Bengkel Sitepu?", 
+                    a: "Kami berlokasi di Jl. Parang I No.15, Kwala Bekala, Medan Johor. Anda bisa melihat peta interaktif kami di halaman Kontak atau klik navigasi di website ini." 
+                  }
+                ].map((faq, i) => (
+                  <AccordionItem key={i} value={`item-${i}`} className="border-none bg-slate-50 px-8 py-2 rounded-[2rem] hover:bg-slate-100 transition-colors">
+                    <AccordionTrigger className="text-xl font-black text-slate-950 hover:no-underline uppercase tracking-tight text-left">
+                      {faq.q}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-slate-600 font-bold text-lg leading-relaxed pb-6">
+                      {faq.a}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
           </div>
         </div>
       </section>
