@@ -83,6 +83,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  verification: {
+    google: "sX7GKm0N3obXQ61mcp0Yqm7g9o4HFVml0EbTIdkdK9Q",
+  },
 };
 
 import { Navbar } from "@/components/layout/Navbar";
