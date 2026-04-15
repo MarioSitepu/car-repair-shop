@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="bg-slate-950 text-slate-300 pt-24 pb-12 relative overflow-hidden">
       {/* Background Decor */}
       <div className="absolute inset-0 bg-grid-white opacity-[0.03]" />
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
+      <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-accent/30 to-transparent" />
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">

@@ -66,7 +66,7 @@ export default function ContactPage() {
                 { icon: <Mail className="w-6 h-6" />, title: "Email Resmi", content: "stinart123@gmail.com" },
                 { icon: <Clock className="w-6 h-6" />, title: "Jam Operasional", content: "Sen - Sab (08:00 - 17:00)\nMinggu Tutup" },
               ].map((item, idx) => (
-                <div key={idx} className="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-xl shadow-slate-200/40 group hover:border-accent transition-colors">
+                <div key={idx} className="bg-white p-8 rounded-4xl border border-slate-200 shadow-xl shadow-slate-200/40 group hover:border-accent transition-colors">
                   <div className="flex items-center gap-6">
                     <div className="bg-slate-50 p-4 rounded-2xl text-slate-950 group-hover:bg-accent transition-colors">
                       {item.icon}
@@ -202,7 +202,7 @@ export default function ContactPage() {
               loading="lazy" 
               referrerPolicy="no-referrer-when-downgrade"
               title="Lokasi Bengkel Sitepu"
-              className="grayscale-[20%] group-hover:grayscale-0 transition-all duration-700"
+              className="grayscale-20 group-hover:grayscale-0 transition-all duration-700"
             ></iframe>
             <div className="absolute top-8 left-8 z-10">
               <div className="glass p-6 rounded-3xl border border-white/20 backdrop-blur-xl pointer-events-none">

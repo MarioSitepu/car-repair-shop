@@ -47,8 +47,8 @@ export default function Home() {
               alt="Bengkel Sitepu - Bengkel Mobil Profesional Jakarta dengan Layanan Servis Terbaik" 
               className="w-full h-full object-cover opacity-50"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/20 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-slate-950 via-slate-950/40 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-r from-slate-950 via-slate-950/20 to-transparent" />
             <div className="absolute inset-0 bg-grid-white opacity-10" />
           </motion.div>
         </div>
@@ -62,7 +62,7 @@ export default function Home() {
           >
             <motion.div
               variants={itemVariants}
-              className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full glass text-white text-xs font-black uppercase tracking-[0.3em]"
+              className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full glass text-white text-[10px] sm:text-xs font-black uppercase tracking-[0.2em] sm:tracking-[0.3em]"
             >
               <div className="flex -space-x-2">
                 {[1, 2, 3].map(i => (
@@ -76,7 +76,7 @@ export default function Home() {
 
             <motion.h1 
               variants={itemVariants} 
-              className="text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] text-white uppercase text-balance"
+              className="text-4xl sm:text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] text-white uppercase text-balance"
             >
               Bengkel Sitepu <br/>
               <span className="text-accent italic selection:bg-white selection:text-slate-900">Parang 1 Medan.</span>
@@ -84,18 +84,18 @@ export default function Home() {
             
             <motion.p 
               variants={itemVariants} 
-              className="text-xl md:text-2xl text-slate-300 leading-relaxed max-w-2xl font-medium tracking-tight"
+              className="text-lg sm:text-xl md:text-2xl text-slate-300 leading-relaxed max-w-2xl font-medium tracking-tight"
             >
               Bukan sekadar bengkel. Kami adalah partner pemeliharaan kendaraan dengan standar teknologi diagnostik masa depan.
             </motion.p>
             
-            <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-5 pt-4">
-              <Button size="lg" className="text-sm h-16 px-10 bg-accent hover:bg-yellow-500 text-slate-950 shadow-2xl shadow-accent/20 transition-all hover:scale-105 font-black uppercase tracking-widest gap-2 rounded-2xl" asChild>
+            <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 sm:gap-5 pt-4">
+              <Button size="lg" className="text-xs sm:text-sm h-14 sm:h-16 px-8 sm:px-10 bg-accent hover:bg-yellow-500 text-slate-950 shadow-2xl shadow-accent/20 transition-all hover:scale-105 font-black uppercase tracking-widest gap-2 rounded-2xl" asChild>
                 <Link href="/contact">Booking Servis <ChevronRight className="w-5 h-5" /></Link>
               </Button>
-              <Button size="lg" variant="outline" className="text-sm h-16 px-10 bg-white/5 backdrop-blur-md text-white border-white/10 hover:bg-white hover:text-slate-950 transition-all font-black uppercase tracking-widest gap-3 rounded-2xl group" asChild>
+              <Button size="lg" variant="outline" className="text-xs sm:text-sm h-14 sm:h-16 px-8 sm:px-10 bg-white/5 backdrop-blur-md text-white border-white/10 hover:bg-white hover:text-slate-950 transition-all font-black uppercase tracking-widest gap-3 rounded-2xl group" asChild>
                 <a href="https://wa.me/6285262065007?text=Halo%20Bengkel%20Sitepu%20Medan%2C%20saya%20ingin%20konsultasi%20mengenai%20servis%20mobil%20saya..." target="_blank" rel="noopener noreferrer">
-                  <Play className="w-4 h-4 fill-current group-hover:scale-110 transition-transform" />
+                  <Play className="w-3.5 h-3.5 fill-current group-hover:scale-110 transition-transform" />
                   Konsultasi Video
                 </a>
               </Button>
@@ -110,7 +110,7 @@ export default function Home() {
           transition={{ delay: 2, duration: 1 }}
           className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:block"
         >
-          <div className="w-px h-24 bg-gradient-to-b from-accent to-transparent" />
+          <div className="w-px h-24 bg-linear-to-b from-accent to-transparent" />
         </motion.div>
       </section>
 
@@ -120,7 +120,7 @@ export default function Home() {
           {[...Array(4)].map((_, i) => (
             <div key={i} className="flex gap-16 items-center">
               {["TOYOTA", "HONDA", "SUZUKI", "MITSUBISHI", "BMW", "MERCEDES"].map((brand, j) => (
-                <span key={j} className="text-slate-950 font-black text-3xl tracking-[0.2em] italic">
+                <span key={j} className="text-slate-950 font-black text-xl sm:text-3xl tracking-[0.2em] italic">
                   {brand}
                 </span>
               ))}
@@ -137,7 +137,7 @@ export default function Home() {
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="md:col-span-8 bg-white rounded-[2.5rem] p-10 md:p-16 shadow-2xl shadow-slate-200/50 border border-slate-100 flex flex-col justify-between group overflow-hidden relative"
+              className="md:col-span-8 bg-white rounded-4xl p-6 sm:p-10 md:p-16 shadow-2xl shadow-slate-200/50 border border-slate-100 flex flex-col justify-between group overflow-hidden relative"
             >
               <div className="absolute top-0 right-0 p-12 opacity-5 scale-150 rotate-12 group-hover:scale-175 group-hover:rotate-6 transition-all duration-700">
                 <ShieldCheck className="w-64 h-64 text-slate-950" />
@@ -146,7 +146,7 @@ export default function Home() {
                 <div className="bg-accent/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-10 group-hover:scale-110 transition-transform duration-500">
                   <ShieldCheck className="w-8 h-8 text-accent" />
                 </div>
-                <h2 className="text-4xl md:text-5xl font-black text-slate-950 mb-6 uppercase tracking-tight font-heading leading-none">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-950 mb-6 uppercase tracking-tight font-heading leading-tight md:leading-none">
                   Bengkel Mobil Medan <br/><span className="text-accent underline decoration-accent/20">Spesialis Pickup.</span>
                 </h2>
                 <p className="text-slate-600 text-lg max-w-lg leading-relaxed font-medium">
@@ -163,7 +163,7 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="md:col-span-4 bg-slate-950 text-white rounded-[2.5rem] p-10 flex flex-col justify-center shadow-2xl relative overflow-hidden group"
+              className="md:col-span-4 bg-slate-950 text-white rounded-4xl p-8 sm:p-10 flex flex-col justify-center shadow-2xl relative overflow-hidden group"
             >
               <div className="absolute top-0 left-0 w-full h-full bg-grid-white opacity-5" />
               <div className="relative z-10 text-center">
@@ -184,11 +184,11 @@ export default function Home() {
 
       {/* Testimonials - Social Proof */}
       <section className="py-32 bg-slate-50 relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
+        <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-slate-200 to-transparent" />
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <div className="text-accent font-black uppercase tracking-[0.4em] text-xs mb-4">APA KATA MEREKA?</div>
-            <h2 className="text-5xl md:text-7xl font-black text-slate-950 tracking-tighter uppercase leading-none font-heading mb-6">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-black text-slate-950 tracking-tighter uppercase leading-[0.95] font-heading mb-6">
               Dipercaya Oleh <span className="text-accent">Ribuan</span> Pengendara.
             </h2>
             <p className="text-slate-500 font-medium text-lg leading-relaxed">
@@ -249,16 +249,16 @@ export default function Home() {
       {/* FAQ Section - SEO Authority */}
       <section className="py-32 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-20">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-20">
             <div className="lg:col-span-5">
               <div className="text-accent font-black uppercase tracking-[0.4em] text-xs mb-4">PERTANYAAN UMUM</div>
-              <h2 className="text-5xl md:text-6xl font-black text-slate-950 tracking-tighter uppercase leading-none font-heading mb-8">
-                Masih Punya <span className="text-border text-slate-200">Pertanyaan?</span>
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-slate-950 tracking-tighter uppercase leading-none font-heading mb-8">
+                Masih Punya <span className="text-border hidden sm:inline">Pertanyaan?</span><span className="text-accent sm:hidden">???</span>
               </h2>
               <p className="text-slate-500 font-medium text-lg leading-relaxed mb-10 italic">
                 Kami merangkum pertanyaan yang paling sering diajukan untuk memudahkan Anda memahami layanan kami di Bengkel Sitepu Medan.
               </p>
-              <Button size="lg" className="rounded-2xl h-16 px-10 bg-slate-950 text-white font-black uppercase tracking-widest text-xs hover:bg-accent hover:text-slate-950 transition-all gap-4" asChild>
+              <Button size="lg" className="rounded-2xl h-14 sm:h-16 px-8 sm:px-10 bg-slate-950 text-white font-black uppercase tracking-widest text-[10px] sm:text-xs hover:bg-accent hover:text-slate-950 transition-all gap-4" asChild>
                 <a href="https://wa.me/6285262065007?text=Halo%20Bengkel%20Sitepu%20Medan%2C%20saya%20ingin%20tanya%20lebih%20lanjut..." target="_blank" rel="noopener noreferrer">
                   TANYA ADMIN <ChevronRight className="w-4 h-4" />
                 </a>
@@ -284,7 +284,7 @@ export default function Home() {
                     a: "Kami berlokasi di Jl. Parang I No.15, Kwala Bekala, Medan Johor. Anda bisa melihat peta interaktif kami di halaman Kontak atau klik navigasi di website ini." 
                   }
                 ].map((faq, i) => (
-                  <AccordionItem key={i} value={`item-${i}`} className="border-none bg-slate-50 px-8 py-2 rounded-[2rem] hover:bg-slate-100 transition-colors">
+                  <AccordionItem key={i} value={`item-${i}`} className="border-none bg-slate-50 px-8 py-2 rounded-4xl hover:bg-slate-100 transition-colors">
                     <AccordionTrigger className="text-xl font-black text-slate-950 hover:no-underline uppercase tracking-tight text-left">
                       {faq.q}
                     </AccordionTrigger>
@@ -309,7 +309,7 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-slate-950/90 backdrop-blur-sm" />
           <div className="absolute inset-0 bg-grid-white opacity-5" />
-          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/50 to-transparent" />
+          <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-accent/50 to-transparent" />
         </div>
         
         <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
@@ -319,7 +319,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <h2 className="text-5xl md:text-8xl font-black mb-8 text-white tracking-widest uppercase font-heading leading-tight">
+            <h2 className="text-4xl sm:text-5xl md:text-8xl font-black mb-8 text-white tracking-widest uppercase font-heading leading-tight">
               Beri Mobil Anda <br/><span className="text-accent underline decoration-white/10 underline-offset-8">Terbaik.</span>
             </h2>
             <p className="text-xl md:text-2xl text-slate-400 mb-12 leading-relaxed font-medium max-w-2xl mx-auto italic">

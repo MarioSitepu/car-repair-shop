@@ -40,7 +40,7 @@ export default function AboutPage() {
             transition={{ delay: 0.1 }}
             className="text-5xl md:text-8xl font-black text-white mb-8 tracking-tighter uppercase font-heading leading-none"
           >
-            Kualitas <br/><span className="text-border text-slate-800">Tanpa Kompromi.</span>
+            Kualitas <br/><span className="text-stroke-thin text-slate-800">Tanpa Kompromi.</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 30 }}
@@ -95,7 +95,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="aspect-[4/5] rounded-[3.5rem] overflow-hidden shadow-2xl relative z-10 border-8 border-white">
+              <div className="aspect-4/5 rounded-[3.5rem] overflow-hidden shadow-2xl relative z-10 border-8 border-white">
                 <img 
                   src="/exterior-main.png" 
                   alt="Sejarah dan Tim Bengkel Sitepu - Solusi Perawatan Mobil Terpercaya Sejak 2014" 
@@ -103,8 +103,8 @@ export default function AboutPage() {
                 />
               </div>
               {/* Floating Decoration */}
-              <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-accent rounded-[3rem] -z-0 opacity-20 blur-2xl" />
-              <div className="absolute -top-10 -right-10 w-48 h-48 bg-slate-950 rounded-[3rem] -z-0 opacity-10 blur-2xl" />
+              <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-accent rounded-[3rem] z-0 opacity-20 blur-2xl" />
+              <div className="absolute -top-10 -right-10 w-48 h-48 bg-slate-950 rounded-[3rem] z-0 opacity-10 blur-2xl" />
             </motion.div>
           </div>
         </div>

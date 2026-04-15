@@ -56,7 +56,7 @@ export default function ServicesPage() {
             alt="Layanan Diagnosa Mesin Komputerisasi Bengkel Sitepu Jakarta" 
             className="w-full h-full object-cover opacity-20"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-slate-950 via-transparent to-transparent" />
           <div className="absolute inset-0 bg-grid-white opacity-5" />
         </div>
         
@@ -111,7 +111,7 @@ export default function ServicesPage() {
                     </div>
                     <CardTitle className="text-2xl font-black uppercase tracking-tight font-heading group-hover:text-accent transition-colors">{service.title}</CardTitle>
                   </CardHeader>
-                  <CardContent className="p-8 pt-0 flex-grow">
+                  <CardContent className="p-8 pt-0 grow">
                     <CardDescription className="text-base text-slate-600 leading-relaxed font-medium mb-8">
                       {service.desc}
                     </CardDescription>
